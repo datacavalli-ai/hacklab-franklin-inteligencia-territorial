@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap HackLab → MVP Franklin | IDI DATA X</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --panel:#111827;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --blue:#2563eb;
+      --green:#16a34a;
+      --orange:#f97316;
+      --purple:#7c3aed;
+      --border:#e5e7eb;
+      --soft:#f8fafc;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:#f3f4f6;color:var(--text);line-height:1.55}
+    header{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;padding:46px 6vw 38px}
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.85;font-weight:700}
+    h1{font-size:clamp(30px,5vw,54px);line-height:1.05;margin:12px 0 12px;font-weight:800}
+    .subtitle{font-size:clamp(16px,2vw,22px);max-width:1050px;opacity:.92}
+    .meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;font-size:14px}
+    main{padding:34px 6vw 56px;max-width:1400px;margin:auto}
+    .section-title{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:24px 0 16px}
+    .section-title h2{font-size:28px;margin:0;color:#111827}
+    .lead{background:white;border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 10px 24px rgba(15,23,42,.06);margin-bottom:24px}
+    .lead strong{color:#0f172a}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:20px 0 28px}
+    .kpi{background:white;border-radius:16px;padding:18px;border:1px solid var(--border);box-shadow:0 8px 18px rgba(15,23,42,.05)}
+    .kpi .n{font-size:30px;font-weight:800;color:var(--blue)}
+    .kpi .l{font-size:14px;color:var(--muted);margin-top:4px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{background:white;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(15,23,42,.06)}
+    .card-top{padding:18px 20px;background:linear-gradient(135deg,#f8fafc,#eef2ff);border-bottom:1px solid var(--border)}
+    .class{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
+    .card h3{font-size:22px;margin:6px 0 0;color:#111827}
+    .card-body{padding:20px}
+    .block{margin-bottom:16px}
+    .block h4{margin:0 0 6px;font-size:15px;color:#111827;display:flex;align-items:center;gap:7px}
+    .block p{margin:0;color:#374151}
+    ul{margin:8px 0 0 20px;padding:0}
+    li{margin:5px 0}
+    .tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{font-size:12px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;padding:5px 9px;border-radius:999px;font-weight:700}
+    table{width:100%;border-collapse:collapse;background:white;border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(15,23,42,.06);border:1px solid var(--border)}
+    th{background:#0f172a;color:white;text-align:left;padding:14px;font-size:14px}
+    td{padding:14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:14px}
+    tr:last-child td{border-bottom:none}
+    .model{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:26px}
+    .panel{background:white;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 10px 26px rgba(15,23,42,.06)}
+    .formula{background:#0f172a;color:white;border-radius:16px;padding:18px;font-family:Consolas,monospace;overflow:auto;margin-top:12px}
+    .footer{background:#111827;color:#d1d5db;padding:28px 6vw;text-align:center}
+    .footer strong{color:white}
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.model{grid-template-columns:1fr}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}main{padding:24px 18px}.card h3{font-size:20px}header{padding:36px 20px}}
+    @media print{header{background:#0f172a!important}.card,.lead,.panel,table{box-shadow:none}.cards{grid-template-columns:1fr}body{background:white}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">IDI DATA X · AcademIA HackLab 2026</div>
+    <h1>Roadmap HackLab → MVP Franklin</h1>
+    <div class="subtitle">Cómo cada módulo fortalece la solución de Inteligencia Territorial para la Gestión Ambiental Urbana en Barrio Franklin.</div>
+    <div class="meta">
+      <div class="pill">Proyecto: Inteligencia Territorial para la Gestión Ambiental Urbana</div>
+      <div class="pill">Piloto: Barrio Franklin</div>
+      <div class="pill">Enfoque: datos · territorio · comunidad · escalamiento</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="lead">
+      <strong>Propósito del documento.</strong> Este roadmap traduce las 8 sesiones de AcademIA HackLab en una hoja de preparación para el equipo. El objetivo es llegar a cada clase con preguntas concretas, conectar los aprendizajes con el MVP Franklin y fortalecer el modelo de decisión territorial basado en evidencia.
+    </section>
+
+    <section class="grid">
+      <div class="kpi"><div class="n">8</div><div class="l">módulos formativos</div></div>
+      <div class="kpi"><div class="n">4</div><div class="l">ejes del MVP: datos, espacio, comunidad y escala</div></div>
+      <div class="kpi"><div class="n">1</div><div class="l">piloto territorial: Barrio Franklin</div></div>
+      <div class="kpi"><div class="n">75%</div><div class="l">asistencia mínima para certificación</div></div>
+    </section>
+
+    <div class="section-title"><h2>Módulos y aplicación al MVP</h2></div>
+    <section class="cards">
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 01</div><h3>Fundamentos de IA y Estrategias de Prompting</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Uso estratégico de IA generativa, plataformas clave e ingeniería de prompts para optimizar análisis, documentación y toma de decisiones.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Crear prompts reutilizables para resumir terreno, generar reportes, interpretar indicadores, preparar minutas y apoyar la comunicación con municipio y HUB STGO.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Definir 5 prompts base del proyecto.</li><li>Documentar hipótesis territorial actual.</li><li>Preparar ejemplos de datos de terreno.</li></ul></div>
+          <div class="tagrow"><span class="tag">IA aplicada</span><span class="tag">Productividad</span><span class="tag">Reportes</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 02</div><h3>Gestión de Datasets y Generación de Código en Lenguaje Natural</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Estructuras de datos, modelos aplicados y generación automatizada de código mediante lenguaje natural.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Ordenar datasets de visitas, puntos críticos, evidencia fotográfica, capas municipales y datos abiertos para automatizar análisis en Python/Colab.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Consolidar diccionario de datos del MVP.</li><li>Separar datos de terreno, externos y municipales.</li><li>Identificar campos mínimos para modelar criticidad.</li></ul></div>
+          <div class="tagrow"><span class="tag">Datasets</span><span class="tag">Python</span><span class="tag">Automatización</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 03</div><h3>Análisis Urbano con Python y Operaciones Espaciales</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Ecosistema Python aplicado al urbanismo, operaciones geométricas, sistemas de coordenadas e integración de capas geoespaciales.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Fortalecer el núcleo técnico del MVP: AOI Franklin, capas OSM, puntos de microbasurales, heatmaps, distancia a equipamientos y análisis por manzana.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Revisar GeoPandas, Shapely, Folium y CRS.</li><li>Validar coordenadas WGS84 y capas base.</li><li>Preparar preguntas sobre buffers, intersecciones y densidades.</li></ul></div>
+          <div class="tagrow"><span class="tag">GeoPandas</span><span class="tag">CRS</span><span class="tag">Heatmap</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 04</div><h3>Inteligencia Colectiva y Relevamiento de Datos Geoespaciales</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Crowdsourcing, mapeo participativo y herramientas digitales para recolección comunitaria de información con rigor geoespacial.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Diseñar un mecanismo de reporte ciudadano georreferenciado para complementar observaciones de terreno y registros institucionales.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Definir qué datos podría aportar la comunidad.</li><li>Diseñar formulario mínimo de reporte.</li><li>Revisar criterios de validación de evidencia.</li></ul></div>
+          <div class="tagrow"><span class="tag">Ciencia ciudadana</span><span class="tag">Crowdsourcing</span><span class="tag">Terreno</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 05</div><h3>Infraestructura IoT y Procesamiento de Lenguaje para la Participación</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Integración de sensores ciudadanos, dispositivos IoT y Procesamiento de Lenguaje Natural para sistematizar participación ciudadana.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Explorar una fase futura con sensores, reportes ciudadanos, cámaras o texto de denuncias para alimentar alertas tempranas y priorización municipal.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Identificar variables capturables por sensores.</li><li>Listar fuentes textuales: denuncias, formularios, redes, app municipal.</li><li>Separar MVP actual de fase futura IoT/PNL.</li></ul></div>
+          <div class="tagrow"><span class="tag">IoT</span><span class="tag">PNL</span><span class="tag">Alertas</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 06</div><h3>Análisis de Sentimiento e Integración Small & Big Data</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Análisis cualitativo en redes sociales y consultas públicas, integrando datos comunitarios con grandes volúmenes institucionales.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Combinar evidencia de terreno, percepción ciudadana, datos municipales y datos abiertos para enriquecer el índice de criticidad territorial.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Definir Small Data: observaciones, fotos, comunidad.</li><li>Definir Big Data: registros municipales, censo, OSM, denuncias.</li><li>Evaluar cómo ponderar percepción vs evidencia física.</li></ul></div>
+          <div class="tagrow"><span class="tag">Small Data</span><span class="tag">Big Data</span><span class="tag">Sentimiento</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 07</div><h3>Validación Institucional y Caso de Uso Aplicado</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Traducción de capacidades técnicas en un caso institucional viable, con foco en adopción, actores, gobernanza y valor público.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Preparar una narrativa clara para Municipalidad, HUB STGO y potenciales aliados: problema, evidencia, solución, impacto y próximos pasos.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Definir usuario institucional principal.</li><li>Listar decisiones que el MVP debe apoyar.</li><li>Preparar matriz de actores y responsabilidades.</li></ul></div>
+          <div class="tagrow"><span class="tag">Gobernanza</span><span class="tag">Valor público</span><span class="tag">Adopción</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><div class="class">Clase 08</div><h3>Implementación Estratégica: Del Piloto a la Escala</h3></div>
+        <div class="card-body">
+          <div class="block"><h4>¿Qué trata?</h4><p>Hoja de ruta para adopción de IA organizacional, diseño, ejecución y evaluación de pilotos, presentación final y defensa de resultados.</p></div>
+          <div class="block"><h4>Aplicación Franklin</h4><p>Convertir el piloto de Barrio Franklin en una metodología replicable para otras zonas, comunas o problemáticas ambientales urbanas.</p></div>
+          <div class="block"><h4>Preparación</h4><ul><li>Definir estado actual TRL/MVP.</li><li>Construir hoja de ruta 30-60-90 días.</li><li>Preparar propuesta de escalamiento y métricas de impacto.</li></ul></div>
+          <div class="tagrow"><span class="tag">Escalamiento</span><span class="tag">TRL</span><span class="tag">Impacto</span></div>
+        </div>
+      </article>
+    </section>
+
+    <div class="section-title"><h2>Relación con el modelo de decisión territorial</h2></div>
+    <section class="model">
+      <div class="panel">
+        <p>El objetivo no es sólo mapear microbasurales, sino construir un sistema de priorización territorial basado en evidencia. Cada módulo fortalece una dimensión del modelo:</p>
+        <div class="formula">
+Índice de Criticidad Territorial = f(
+  evidencia de terreno,
+  intensidad espacial,
+  recurrencia,
+  volumen estimado,
+  obstrucción peatonal,
+  proximidad a equipamientos,
+  percepción ciudadana,
+  registros institucionales,
+  capacidad de respuesta municipal
+)
+        </div>
+      </div>
+      <div class="panel">
+        <h3 style="margin-top:0">Preguntas guía para mentores</h3>
+        <ul>
+          <li>¿Qué variables mínimas hacen robusto el índice de criticidad?</li>
+          <li>¿Cómo validar datos de ciencia ciudadana sin perder rigor geoespacial?</li>
+          <li>¿Qué nivel de predicción es razonable para un MVP temprano?</li>
+          <li>¿Cómo pasar de Franklin a una metodología replicable?</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="section-title"><h2>Matriz ejecutiva de preparación</h2></div>
+    <table>
+      <thead>
+        <tr><th>Módulo</th><th>Aprendizaje clave</th><th>Aplicación Franklin</th><th>Dato/insumo a preparar</th><th>Impacto en MVP</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Clase 1</td><td>Prompting e IA generativa</td><td>Reportes, minutas y análisis asistido</td><td>Prompts base y ejemplos de terreno</td><td>Productividad y comunicación</td></tr>
+        <tr><td>Clase 2</td><td>Datasets y código</td><td>Automatización en Python/Colab</td><td>Diccionario de datos</td><td>Orden técnico del MVP</td></tr>
+        <tr><td>Clase 3</td><td>Operaciones espaciales</td><td>AOI, buffers, capas, heatmaps</td><td>Shapefiles, puntos, CRS</td><td>Núcleo geoespacial</td></tr>
+        <tr><td>Clase 4</td><td>Mapeo participativo</td><td>Reporte ciudadano georreferenciado</td><td>Formulario y protocolo de validación</td><td>Ciencia ciudadana</td></tr>
+        <tr><td>Clase 5</td><td>IoT y PNL</td><td>Alertas futuras y texto ciudadano</td><td>Fuentes textuales y variables sensor</td><td>Evolución tecnológica</td></tr>
+        <tr><td>Clase 6</td><td>Small & Big Data</td><td>Integración comunitaria/institucional</td><td>Fuentes municipales y percepción</td><td>Modelo más robusto</td></tr>
+        <tr><td>Clase 7</td><td>Caso institucional</td><td>Gobernanza y adopción pública</td><td>Matriz de actores</td><td>Viabilidad institucional</td></tr>
+        <tr><td>Clase 8</td><td>Escalamiento</td><td>Franklin → comuna/región</td><td>Roadmap y métricas de impacto</td><td>Ruta de implementación</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <div class="footer">
+    <strong>IDI DATA X</strong> · Inteligencia Territorial & Data Science · “Transformamos datos en información para apoyar mejores decisiones territoriales.”
+  </div>
+</body>
+</html>
